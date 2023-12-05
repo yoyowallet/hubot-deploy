@@ -79,10 +79,10 @@ module.exports = (robot) ->
           
       if robot.adapterName is "slack"
         deployment.user = user.name
-        if msg.message.user.room == 'C7V3FH6NB'
-          channel_name = '#retailer-deploy'
+        if msg.message.user.room == 'C067ESP793R'
+          channel_name = '#rewards-retailer-deploy'
         else
-          channel_name = '#platform-deploy'
+          channel_name = '#rewards-platform-deploy'
         deployment.room = channel_name
 
       deployment.adapter   = robot.adapterName
@@ -138,10 +138,10 @@ module.exports = (robot) ->
 
     if robot.adapterName is "slack"
       deployment.user = user.name
-      if msg.message.user.room == 'C7V3FH6NB'
-        channel_name = '#retailer-deploy'
+      if msg.message.user.room == 'C067ESP793R'
+        channel_name = '#rewards-retailer-deploy'
       else
-        channel_name = '#platform-deploy'
+        channel_name = '#rewards-platform-deploy'
       deployment.room = channel_name
 
     deployment.yubikey   = yubikey
