@@ -79,7 +79,11 @@ module.exports = (robot) ->
           
       if robot.adapterName is "slack"
         deployment.user = user.name
-        deployment.room = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(msg.message.user.room).name
+        if msg.message.user.room == 'C067ESP793R'
+          channel_name = '#rewards-retailer-deploy'
+        else
+          channel_name = '#rewards-platform-deploy'
+        deployment.room = channel_name
 
       deployment.adapter   = robot.adapterName
       deployment.robotName = robot.name
@@ -134,7 +138,11 @@ module.exports = (robot) ->
 
     if robot.adapterName is "slack"
       deployment.user = user.name
-      deployment.room = robot.adapter.client.rtm.dataStore.getChannelGroupOrDMById(msg.message.user.room).name
+      if msg.message.user.room == 'C067ESP793R'
+        channel_name = '#rewards-retailer-deploy'
+      else
+        channel_name = '#rewards-platform-deploy'
+      deployment.room = channel_name
 
     deployment.yubikey   = yubikey
     deployment.adapter   = robot.adapterName
