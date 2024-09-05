@@ -1,5 +1,3 @@
 node_modules
 *.log
 .node-version
-test/models/*.js
-test/scripts/*.js
