@@ -6,7 +6,7 @@
 const Path = require('path');
 const {
   Vault
-} = require('./src/hubot/vault.js');
+} = require('./src/hubot/vault.mjs');
 
 module.exports = function (robot, scripts) {
   robot.vault = {
@@ -15,7 +15,7 @@ module.exports = function (robot, scripts) {
     }
   };
 
-  robot.loadFile(Path.resolve(__dirname, "src", "scripts"), "http.js");
-  robot.loadFile(Path.resolve(__dirname, "src", "scripts"), "token.js");
-  return robot.loadFile(Path.resolve(__dirname, "src", "scripts"), "deploy.js");
+  robot.loadFile(Path.resolve(__dirname, "src", "scripts"), "http.mjs");
+  robot.loadFile(Path.resolve(__dirname, "src", "scripts"), "token.mjs");
+  return robot.loadFile(Path.resolve(__dirname, "src", "scripts"), "deploy.mjs");
 };
