@@ -141,7 +141,7 @@ module.exports = (robot) ->
       if msg.message.user.room == 'C067ESP793R'
         channel_name = '#rewards-retailer-deploy'
       else
-        channel_name = '#rewards-platform-deploy'
+        channel_name = '#rewards-legacy-platform-deploy'
       deployment.room = channel_name
 
     deployment.yubikey   = yubikey
